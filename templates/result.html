@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RESULT</title>
+</head>
+<body>
+    <form action="/history" method="post">
+        <h1>
+            <font size="8"> WORDJSON IN MONGODB </font><br>
+            {{FILENAME}}     <input type="submit" value="Go to History"><br>
+        </h1>
+
+    {% for x in DATA %}
+        <font size="5">word : {{x['word']}}({{x['number']}})  ->  {{x['Json']}}</font>><br>
+    {% endfor %}
+    </form>
+</body>
+</html>

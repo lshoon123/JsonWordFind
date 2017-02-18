@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HISTORY</title>
+</head>
+<body>
+    <style>
+        table.type11 {
+            border-collapse: separate;
+            border-spacing: 1px;
+            text-align: center;
+            line-height: 1.5;
+            margin: 20px 10px;
+        }
+        table.type11 th {
+            width: 155px;
+            padding: 10px;
+            font-weight: bold;
+            vertical-align: top;
+            color: #fff;
+            background: #0A82FF ;
+        }
+        table.type11 td {
+            width: 155px;
+            padding: 10px;
+            vertical-align: top;
+            border-bottom: 1px solid #ccc;
+            background: #eee;
+        }
+    </style>
+    <table class="type11">
+        <thead>
+        <tr>
+            <th scope="cols">NAME</th>
+            <th scope="cols">SIZE</th>
+            <th scope="cols">DATE</th>
+            <th scope="cols">LINK</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for x in NAMEARRAY %}
+        <tr>
+            <td>{{x}}</td>    <td>{{DATAARRAY[x]['DataSize']}} KB</td>  <td>{{DATAARRAY[x]['DATE']}}</td>
+            <td><A HREF="http://127.0.0.1:5000/result2/{{x}}">LINK</A></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <A HREF="http://127.0.0.1:5000/">GO TO UPLOAD</A>
+
+</body>
+</html>
